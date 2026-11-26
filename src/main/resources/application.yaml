@@ -1,6 +1,6 @@
 ktor:
-  deployment:
-    port: $PORT:8080
   application:
     modules:
-      - com.example.ApplicationKt.module
+      - <your.package>.ApplicationKt.module
+  deployment:
+    port: "$PORT:8080"
