@@ -1,7 +1,7 @@
 # Stage 1: Build fat JAR with JDK 21
 FROM gradle:8.10-jdk21 AS build
 WORKDIR /app
-COPY --chown=gradle:gradle src/main/resources .
+COPY --chown=gradle:gradle . .
 RUN gradle buildFatJar --no-daemon
 
 # Stage 2: Lightweight production runtime
